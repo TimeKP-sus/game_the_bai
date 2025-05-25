@@ -1,0 +1,158 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlh75yop4y53n"]
+
+[ext_resource type="Script" uid="uid://cbgrovjy8gnxf" path="res://scene/menu/Menu.cs" id="1_als81"]
+[ext_resource type="Texture2D" uid="uid://beyv6640e28if" path="res://assets/bg/1.png" id="1_ny6dg"]
+[ext_resource type="PackedScene" uid="uid://1lb7kupbqv7l" path="res://scene/bg_bala.tscn" id="1_wwfty"]
+[ext_resource type="Script" uid="uid://cikshicsg8jhg" path="res://scene/menu/ParallaxBackground.cs" id="2_huf2n"]
+[ext_resource type="StyleBox" uid="uid://dbtaellqbopey" path="res://assets/shader/panel.tres" id="2_ojih3"]
+[ext_resource type="Texture2D" uid="uid://do30y2dn1iw4c" path="res://assets/bg/4.png" id="4_rmufa"]
+[ext_resource type="Texture2D" uid="uid://dvurtiff0upjy" path="res://assets/bg/2.png" id="5_53055"]
+[ext_resource type="StyleBox" uid="uid://byw2movqd2u1d" path="res://assets/shader/button_hover.tres" id="6_7ruq5"]
+[ext_resource type="FontFile" uid="uid://ckbhfuwafrf6q" path="res://assets/font/SVN-Retron 2000.otf" id="6_i0sq5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojih3"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.380392, 0.478431, 0.721569, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_als81")
+
+[node name="BgBala" parent="." instance=ExtResource("1_wwfty")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("2_huf2n")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(600, 0)
+
+[node name="1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-20, 20)
+scale = Vector2(3.33333, 3.30247)
+texture = ExtResource("1_ny6dg")
+centered = false
+flip_v = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(540, 308)
+rotation = 3.14061
+texture = ExtResource("4_rmufa")
+centered = false
+
+[node name="7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1270, 320)
+rotation = 3.14061
+texture = ExtResource("4_rmufa")
+centered = false
+
+[node name="8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1790, 340)
+rotation = 3.14061
+texture = ExtResource("4_rmufa")
+centered = false
+
+[node name="5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(880, 330)
+rotation = 3.14061
+texture = ExtResource("4_rmufa")
+centered = false
+
+[node name="2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1146, 329)
+scale = Vector2(1.57639, 1.26543)
+texture = ExtResource("5_53055")
+
+[node name="3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(805, 329)
+scale = Vector2(2.76042, 1.26543)
+texture = ExtResource("5_53055")
+
+[node name="6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(970, 329)
+scale = Vector2(3.33333, 1.26543)
+texture = ExtResource("5_53055")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 550.0
+offset_top = 180.0
+offset_right = 1330.0
+offset_bottom = 400.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_i0sq5")
+theme_override_font_sizes/normal_font_size = 123
+bbcode_enabled = true
+text = " [wave amp=50.0 freq=2.0 connected=1][shake rate=20.0 level=5 connected=1][fade start=0.1 length=24]PROJECT A "
+tab_size = 1
+
+[node name="choi" type="Button" parent="."]
+offset_left = 740.0
+offset_top = 440.0
+offset_right = 1135.0
+offset_bottom = 527.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("6_i0sq5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover_pressed = ExtResource("6_7ruq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojih3")
+theme_override_styles/pressed = ExtResource("6_7ruq5")
+theme_override_styles/normal = ExtResource("2_ojih3")
+text = "Bắt đầu chơi"
+
+[node name="the_bai" type="Button" parent="."]
+offset_left = 760.0
+offset_top = 580.0
+offset_right = 1120.0
+offset_bottom = 667.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("6_i0sq5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover_pressed = ExtResource("6_7ruq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojih3")
+theme_override_styles/pressed = ExtResource("6_7ruq5")
+theme_override_styles/normal = ExtResource("2_ojih3")
+text = "Các thẻ bài"
+
+[node name="cai_dat" type="Button" parent="."]
+offset_left = 790.0
+offset_top = 720.0
+offset_right = 1090.0
+offset_bottom = 807.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("6_i0sq5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover_pressed = ExtResource("6_7ruq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojih3")
+theme_override_styles/pressed = ExtResource("6_7ruq5")
+theme_override_styles/normal = ExtResource("2_ojih3")
+text = "Cài đặt"
+
+[node name="thoat" type="Button" parent="."]
+offset_left = 840.0
+offset_top = 850.0
+offset_right = 1050.0
+offset_bottom = 937.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("6_i0sq5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover_pressed = ExtResource("6_7ruq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojih3")
+theme_override_styles/pressed = ExtResource("6_7ruq5")
+theme_override_styles/normal = ExtResource("2_ojih3")
+text = "Thoát"
+
+[connection signal="button_down" from="choi" to="." method="_on_choi_button_down"]

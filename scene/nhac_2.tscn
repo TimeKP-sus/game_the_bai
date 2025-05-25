@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://sv6r2dmvriou"]
+
+[ext_resource type="AudioStream" uid="uid://vp2c10o4kil" path="res://assets/nhac_nen/nhac2.mp3" id="1_aopac"]
+
+[node name="Nhac2" type="AudioStreamPlayer"]
+stream = ExtResource("1_aopac")
+pitch_scale = 0.59
+autoplay = true
+playback_type = 1
+parameters/looping = false

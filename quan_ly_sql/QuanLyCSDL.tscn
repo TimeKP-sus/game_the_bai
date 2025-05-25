@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://d017y60d0f1vx"]
+
+[ext_resource type="Script" uid="uid://87bvefyd0bb7" path="res://quan_ly_sql/QuanLyCSDL.cs" id="1_qfcno"]
+
+[node name="QuanLyCSDL" type="Node2D"]
+script = ExtResource("1_qfcno")
+
+[node name="id" type="LineEdit" parent="."]
+offset_left = 133.0
+offset_top = 330.0
+offset_right = 579.0
+offset_bottom = 390.0
+placeholder_text = "id"
+
+[node name="ten" type="LineEdit" parent="."]
+offset_left = 133.0
+offset_top = 434.0
+offset_right = 579.0
+offset_bottom = 494.0
+placeholder_text = "ten"
+
+[node name="trong_so" type="LineEdit" parent="."]
+offset_left = 133.0
+offset_top = 540.0
+offset_right = 579.0
+offset_bottom = 600.0
+placeholder_text = "trong so"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 133.0
+offset_top = 641.0
+offset_right = 255.0
+offset_bottom = 685.0
+text = "them"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 295.0
+offset_top = 641.0
+offset_right = 417.0
+offset_bottom = 685.0
+text = "xoa"

@@ -1,0 +1,293 @@
+[gd_scene load_steps=11 format=3 uid="uid://dxjdkla7n60si"]
+
+[ext_resource type="Script" uid="uid://drqor8ws4tqhe" path="res://scene/online/QuanLyKetNoiOnline.cs" id="1_lkjdx"]
+[ext_resource type="StyleBox" uid="uid://dbtaellqbopey" path="res://assets/shader/panel.tres" id="2_76waj"]
+[ext_resource type="Script" uid="uid://cikshicsg8jhg" path="res://scene/menu/ParallaxBackground.cs" id="2_qel3e"]
+[ext_resource type="PackedScene" uid="uid://cvanlaq2o3u0q" path="res://scene/canvas_layer.tscn" id="2_uw3rf"]
+[ext_resource type="Texture2D" uid="uid://dvurtiff0upjy" path="res://assets/bg/2.png" id="3_ao3xj"]
+[ext_resource type="Texture2D" uid="uid://dgdq8gggm0sj8" path="res://assets/bg/333.png" id="3_j30sq"]
+[ext_resource type="FontFile" uid="uid://ckbhfuwafrf6q" path="res://assets/font/SVN-Retron 2000.otf" id="3_l6ish"]
+[ext_resource type="Texture2D" uid="uid://ctxh2ue8lmhv" path="res://assets/bg/3.png" id="4_qel3e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ao3xj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 4
+border_color = Color(0.823529, 0.623529, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h6ikv"]
+font = ExtResource("3_l6ish")
+font_size = 25
+
+[node name="QuanLyKetNoiOnline" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 450.0
+offset_top = 361.0
+offset_right = 450.0
+offset_bottom = 361.0
+script = ExtResource("1_lkjdx")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_uw3rf")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("2_qel3e")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(500, 0)
+
+[node name="333" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -4
+position = Vector2(961, 539)
+scale = Vector2(3.32986, 3.33951)
+texture = ExtResource("3_j30sq")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1000, 0)
+
+[node name="2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+z_index = -4
+position = Vector2(960, 481)
+scale = Vector2(3.33333, 2.16667)
+texture = ExtResource("3_ao3xj")
+metadata/_edit_lock_ = true
+
+[node name="3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+z_index = -4
+position = Vector2(379.5, 444.5)
+scale = Vector2(1.31771, 2.6821)
+texture = ExtResource("3_ao3xj")
+metadata/_edit_lock_ = true
+
+[node name="4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+z_index = -4
+position = Vector2(780, 615)
+scale = Vector2(2.70833, 2.16667)
+texture = ExtResource("3_ao3xj")
+metadata/_edit_lock_ = true
+
+[node name="5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+z_index = -4
+position = Vector2(560, 709)
+scale = Vector2(1.94444, 2.16667)
+texture = ExtResource("3_ao3xj")
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = -4
+
+[node name="6" type="Sprite2D" parent="Node2D"]
+z_index = -4
+position = Vector2(-150, 559)
+texture = ExtResource("4_qel3e")
+metadata/_edit_lock_ = true
+
+[node name="8" type="Sprite2D" parent="Node2D"]
+z_index = -4
+position = Vector2(-150, 559)
+texture = ExtResource("4_qel3e")
+metadata/_edit_lock_ = true
+
+[node name="7" type="Sprite2D" parent="Node2D"]
+z_index = -4
+position = Vector2(1180, 559)
+texture = ExtResource("4_qel3e")
+metadata/_edit_lock_ = true
+
+[node name="10" type="Sprite2D" parent="Node2D"]
+z_index = -4
+position = Vector2(-340, 349)
+rotation = 1.16968
+texture = ExtResource("4_qel3e")
+metadata/_edit_lock_ = true
+
+[node name="11" type="Sprite2D" parent="Node2D"]
+z_index = -4
+position = Vector2(1340, 407)
+rotation = -1.2343
+texture = ExtResource("4_qel3e")
+metadata/_edit_lock_ = true
+
+[node name="9" type="Sprite2D" parent="Node2D"]
+z_index = -4
+position = Vector2(720, 599)
+rotation = 0.0585107
+texture = ExtResource("4_qel3e")
+
+[node name="12" type="Sprite2D" parent="Node2D"]
+z_index = -4
+position = Vector2(290, 599)
+rotation = 0.136536
+texture = ExtResource("4_qel3e")
+
+[node name="host" type="Button" parent="."]
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = 352.0
+offset_top = 359.0
+offset_right = 632.0
+offset_bottom = 431.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_color = Color(0.909804, 0.662745, 0, 1)
+theme_override_fonts/font = ExtResource("3_l6ish")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_ao3xj")
+theme_override_styles/normal = ExtResource("2_76waj")
+text = "Mở máy chủ"
+
+[node name="join" type="Button" parent="."]
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 299.0
+offset_right = 309.0
+offset_bottom = 340.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/font_hover_color = Color(0.854902, 0.580392, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_color = Color(0.909804, 0.662745, 0, 1)
+theme_override_fonts/font = ExtResource("3_l6ish")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/hover = SubResource("StyleBoxFlat_ao3xj")
+theme_override_styles/normal = ExtResource("2_76waj")
+text = "Tham gia cục bộ"
+
+[node name="tham_gia" type="Button" parent="."]
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = 690.0
+offset_top = -72.0
+offset_right = 919.0
+offset_bottom = -12.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_color = Color(0.909804, 0.662745, 0, 1)
+theme_override_fonts/font = ExtResource("3_l6ish")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/hover = SubResource("StyleBoxFlat_ao3xj")
+theme_override_styles/normal = ExtResource("2_76waj")
+text = "Tham gia"
+
+[node name="start" type="Button" parent="."]
+visible = false
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = 370.0
+offset_top = 499.0
+offset_right = 750.0
+offset_bottom = 609.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_color = Color(0.909804, 0.662745, 0, 1)
+theme_override_fonts/font = ExtResource("3_l6ish")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_ao3xj")
+theme_override_styles/normal = ExtResource("2_76waj")
+text = "Bắt đầu"
+
+[node name="ten" type="LineEdit" parent="."]
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = -120.0
+offset_top = 11.0
+offset_right = 310.0
+offset_bottom = 69.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_l6ish")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_76waj")
+placeholder_text = "Nhập tên"
+
+[node name="dia_chi_ket_noi" type="LineEdit" parent="."]
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = -120.0
+offset_top = -71.0
+offset_right = 650.0
+offset_bottom = -13.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_l6ish")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_76waj")
+placeholder_text = "Địa chỉ mạng kết nối"
+
+[node name="thong_bao" type="Label" parent="."]
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = -231.0
+offset_right = 440.0
+offset_bottom = -189.0
+label_settings = SubResource("LabelSettings_h6ikv")
+
+[node name="bang_nguoi_choi" type="TextEdit" parent="."]
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = 350.0
+offset_top = 9.0
+offset_right = 920.0
+offset_bottom = 339.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_l6ish")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_76waj")
+editable = false
+
+[node name="Button" type="Button" parent="."]
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = -250.0
+offset_top = 569.0
+offset_right = -90.0
+offset_bottom = 622.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_color = Color(0.909804, 0.662745, 0, 1)
+theme_override_fonts/font = ExtResource("3_l6ish")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ao3xj")
+theme_override_styles/normal = ExtResource("2_76waj")
+text = "Kiem tra"
+
+[node name="dau_voi_bot" type="Button" parent="."]
+z_index = 5
+z_as_relative = false
+layout_mode = 0
+offset_left = 670.0
+offset_top = 369.0
+offset_right = 830.0
+offset_bottom = 419.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.486275, 0.976471, 1)
+theme_override_colors/icon_hover_color = Color(0.909804, 0.662745, 0, 1)
+theme_override_fonts/font = ExtResource("3_l6ish")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ao3xj")
+theme_override_styles/normal = ExtResource("2_76waj")
+text = "Đấu với bot"
+
+[connection signal="button_down" from="host" to="." method="_on_host_button_down"]
+[connection signal="button_down" from="join" to="." method="_on_join_button_down"]
+[connection signal="button_down" from="tham_gia" to="." method="_on_tham_gia_button_down"]
+[connection signal="button_down" from="start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="dau_voi_bot" to="." method="_on_dau_voi_bot_button_down"]
