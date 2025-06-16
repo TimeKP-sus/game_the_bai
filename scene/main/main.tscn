@@ -1,0 +1,1206 @@
+[gd_scene load_steps=88 format=3 uid="uid://b46bjydg81kf0"]
+
+[ext_resource type="Texture2D" uid="uid://beyv6640e28if" path="res://assets/bg/1.png" id="1_bfc3n"]
+[ext_resource type="Script" uid="uid://b2o54p0kvxm00" path="res://scene/main/Main.cs" id="1_cleq4"]
+[ext_resource type="Texture2D" uid="uid://ctxh2ue8lmhv" path="res://assets/bg/3.png" id="2_cleq4"]
+[ext_resource type="PackedScene" uid="uid://cpo4vwuh23c7o" path="res://scene/canvas_layer.tscn" id="2_rtpkd"]
+[ext_resource type="Script" uid="uid://cikshicsg8jhg" path="res://scene/menu/ParallaxBackground.cs" id="3_biqav"]
+[ext_resource type="Texture2D" uid="uid://dvurtiff0upjy" path="res://assets/bg/2.png" id="3_rtpkd"]
+[ext_resource type="Texture2D" uid="uid://do30y2dn1iw4c" path="res://assets/bg/4.png" id="4_biqav"]
+[ext_resource type="Texture2D" uid="uid://bcfev2n4ce54h" path="res://assets/bg/222.png" id="5_lysc8"]
+[ext_resource type="Texture2D" uid="uid://dgdq8gggm0sj8" path="res://assets/bg/333.png" id="6_vg48i"]
+[ext_resource type="FontFile" uid="uid://ckbhfuwafrf6q" path="res://assets/font/SVN-Retron 2000.otf" id="7_42uo1"]
+[ext_resource type="Script" uid="uid://c3fbjvfgpv2l1" path="res://script/QuanLyDauVao.cs" id="8_ep0fl"]
+[ext_resource type="Script" uid="uid://baighgyxn3n81" path="res://script/QuanLyNoiDeBai.cs" id="9_v4x5e"]
+[ext_resource type="PackedScene" uid="uid://b45nfggqem15a" path="res://scene/o_de_bai.tscn" id="10_bsts1"]
+[ext_resource type="Script" uid="uid://bgygeqvme2p3w" path="res://script/QuanLyCard.cs" id="11_ttxeb"]
+[ext_resource type="Script" uid="uid://c8pcrgyv70x8c" path="res://script/QuanLyDeck.cs" id="12_gp7ks"]
+[ext_resource type="Texture2D" uid="uid://c7nuiasluwomw" path="res://assets/Deck.png" id="13_nkrvh"]
+[ext_resource type="Script" uid="uid://fnldtpgvj715" path="res://script/CardNguoiChoi.cs" id="14_s3elo"]
+[ext_resource type="Script" uid="uid://b8i535mie3aub" path="res://script/NguoiChoi.cs" id="15_6au48"]
+[ext_resource type="StyleBox" uid="uid://bhuls14iuk65y" path="res://assets/shader/progress.tres" id="18_s1qg3"]
+[ext_resource type="Texture2D" uid="uid://dhfpddqunwhlr" path="res://assets/nhan_vat/nhan_vat_1/Attack.png" id="19_biqav"]
+[ext_resource type="Script" uid="uid://c8ft725s401vp" path="res://script/DoiThu.cs" id="19_hd8jx"]
+[ext_resource type="Texture2D" uid="uid://c4u6k4rcii868" path="res://assets/nhan_vat/nhan_vat_1/Hurt.png" id="20_lysc8"]
+[ext_resource type="Texture2D" uid="uid://badb75wijvdbp" path="res://assets/nhan_vat/nhan_vat_1/Dead.png" id="20_vg48i"]
+[ext_resource type="Texture2D" uid="uid://bojjk5bqavx2d" path="res://assets/nhan_vat/nhan_vat_1/Idle.png" id="21_lysc8"]
+[ext_resource type="AudioStream" uid="uid://bp0lt4gp1jcfj" path="res://assets/nhac_nen/deck1.mp3" id="21_tqshy"]
+[ext_resource type="AudioStream" uid="uid://cfavcnxibtqa" path="res://assets/nhac_nen/deck2.mp3" id="22_3kgru"]
+[ext_resource type="AudioStream" uid="uid://0u5v2jyhvvy6" path="res://assets/nhac_nen/card2.mp3" id="24_1fng4"]
+[ext_resource type="AudioStream" uid="uid://7smqci45mrm6" path="res://assets/nhac_nen/card1.mp3" id="25_dkqdp"]
+[ext_resource type="AudioStream" uid="uid://dbs2iw0aols0o" path="res://assets/nhac_nen/card3.wav" id="26_nb12r"]
+[ext_resource type="AudioStream" uid="uid://bnkl0h8uffpbv" path="res://assets/nhac_nen/card4.wav" id="27_lg5kp"]
+[ext_resource type="StyleBox" uid="uid://byw2movqd2u1d" path="res://assets/shader/button_hover.tres" id="28_cleq4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hybxs"]
+font = ExtResource("7_42uo1")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_tqoya"]
+font = ExtResource("7_42uo1")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cleq4"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 4
+border_color = Color(0.164706, 0.541176, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ha60"]
+size = Vector2(92, 148)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mswub"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep0fl"]
+atlas = ExtResource("19_biqav")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4x5e"]
+atlas = ExtResource("19_biqav")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsts1"]
+atlas = ExtResource("19_biqav")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttxeb"]
+atlas = ExtResource("19_biqav")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrair"]
+atlas = ExtResource("20_vg48i")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbh7x"]
+atlas = ExtResource("20_vg48i")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tle46"]
+atlas = ExtResource("20_vg48i")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm6ru"]
+atlas = ExtResource("20_vg48i")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp7ks"]
+atlas = ExtResource("20_lysc8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkrvh"]
+atlas = ExtResource("20_lysc8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3elo"]
+atlas = ExtResource("20_lysc8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg48i"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42uo1"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6au48"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_on0ow"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6myp"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1qg3"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdqew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ep0fl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4x5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsts1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttxeb")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrair")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbh7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tle46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm6ru")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp7ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkrvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3elo")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg48i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42uo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6au48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_on0ow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6myp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1qg3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6myp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_on0ow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6au48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42uo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg48i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtpkd"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0941176, 0.658824, 0.235294, 1)
+corner_radius_bottom_left = 10
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_of57s"]
+font = ExtResource("7_42uo1")
+font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k65ib"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 4
+border_color = Color(0.844592, 0.0179498, 0.129516, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 10
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_of57s"]
+radius = 50.0
+height = 201.445
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqoya"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 2
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k65ib"]
+font = ExtResource("7_42uo1")
+font_size = 21
+font_color = Color(0.625905, 0.0935314, 1.29953e-06, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jm02"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 4
+border_color = Color(0, 0.529963, 0.418855, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vneqc"]
+font = ExtResource("7_42uo1")
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_rtpkd"]
+font = ExtResource("7_42uo1")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_biqav"]
+atlas = ExtResource("19_biqav")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lysc8"]
+atlas = ExtResource("19_biqav")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd8jx"]
+atlas = ExtResource("19_biqav")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyl2v"]
+atlas = ExtResource("19_biqav")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jed6"]
+atlas = ExtResource("20_vg48i")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq2ik"]
+atlas = ExtResource("20_vg48i")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfgj0"]
+atlas = ExtResource("20_vg48i")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3et1i"]
+atlas = ExtResource("20_vg48i")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqshy"]
+atlas = ExtResource("20_lysc8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kgru"]
+atlas = ExtResource("20_lysc8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrq8m"]
+atlas = ExtResource("20_lysc8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fng4"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkqdp"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb12r"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg5kp"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwnex"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgij3"]
+atlas = ExtResource("21_lysc8")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vneqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_biqav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lysc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd8jx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyl2v")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jed6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq2ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfgj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3et1i")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqshy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kgru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrq8m")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fng4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkqdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb12r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg5kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwnex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgij3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wscrc"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 4
+border_color = Color(0.793521, 0.205972, 0.0975181, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 10
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjnwh"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_biqav"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lysc8"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vg48i"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_42uo1"]
+font = ExtResource("7_42uo1")
+font_size = 35
+font_color = Color(1, 1, 0, 1)
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_cleq4")
+
+[node name="bg" type="ColorRect" parent="."]
+visible = false
+z_index = -3
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_rtpkd")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("3_biqav")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+z_index = -2
+position = Vector2(957.25, 112)
+scale = Vector2(3.34288, 2.03704)
+texture = ExtResource("1_bfc3n")
+
+[node name="222" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(959.5, 282.5)
+scale = Vector2(3.33507, 0.984568)
+texture = ExtResource("5_lysc8")
+
+[node name="222" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2/222"]
+position = Vector2(-0.149933, 24.3566)
+scale = Vector2(1.00885, 1.00012)
+texture = ExtResource("5_lysc8")
+
+[node name="333" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+z_index = -2
+position = Vector2(955, 762)
+scale = Vector2(3.35069, 2)
+texture = ExtResource("6_vg48i")
+region_rect = Rect2(62, -68.5, 577, 281)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(400, 0)
+
+[node name="7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+position = Vector2(289, 912)
+scale = Vector2(1, 1.10494)
+texture = ExtResource("2_cleq4")
+
+[node name="8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+position = Vector2(1640, 924)
+texture = ExtResource("2_cleq4")
+
+[node name="9" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+position = Vector2(463, 895)
+texture = ExtResource("2_cleq4")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1300, 0)
+
+[node name="4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+z_index = -1
+position = Vector2(330, -20)
+rotation = 3.16039
+texture = ExtResource("4_biqav")
+
+[node name="5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+z_index = -1
+position = Vector2(1590, 81)
+rotation = -3.12351
+texture = ExtResource("4_biqav")
+
+[node name="6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+z_index = -1
+position = Vector2(260, 50)
+rotation = -3.12351
+texture = ExtResource("4_biqav")
+
+[node name="7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+z_index = -1
+position = Vector2(770, 60)
+rotation = -3.12351
+texture = ExtResource("4_biqav")
+
+[node name="8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+z_index = -1
+position = Vector2(1410, 60)
+rotation = -3.12351
+texture = ExtResource("4_biqav")
+
+[node name="bg2" type="Node2D" parent="."]
+z_index = -1
+
+[node name="10" type="Sprite2D" parent="bg2"]
+z_index = -1
+position = Vector2(963, 842)
+scale = Vector2(1.16319, 1.07716)
+texture = ExtResource("2_cleq4")
+
+[node name="2" type="Sprite2D" parent="bg2"]
+z_index = -1
+position = Vector2(617.5, 210)
+scale = Vector2(2.1441, 1.2963)
+texture = ExtResource("3_rtpkd")
+
+[node name="11" type="Sprite2D" parent="bg2"]
+visible = false
+z_index = 1
+position = Vector2(950, 960.5)
+scale = Vector2(2.25694, 0.805556)
+texture = ExtResource("3_rtpkd")
+
+[node name="3" type="Sprite2D" parent="bg2"]
+z_index = -1
+position = Vector2(1377.5, 188.066)
+scale = Vector2(1.88368, 1.1609)
+texture = ExtResource("3_rtpkd")
+
+[node name="6" type="Sprite2D" parent="bg2"]
+z_index = -1
+position = Vector2(1377.5, 188.066)
+scale = Vector2(1.88368, 1.1609)
+texture = ExtResource("3_rtpkd")
+
+[node name="thong_bao_luot" type="Label" parent="."]
+z_index = -1
+offset_left = 720.0
+offset_top = 680.0
+offset_right = 1206.0
+offset_bottom = 750.0
+label_settings = SubResource("LabelSettings_hybxs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="vong_dau" type="ColorRect" parent="."]
+z_index = -2
+offset_left = 956.0
+offset_top = 22.0
+offset_right = 1056.0
+offset_bottom = 122.0
+rotation = 0.785398
+
+[node name="Label" type="Label" parent="vong_dau"]
+layout_mode = 0
+offset_left = -26.8701
+offset_top = 50.9117
+offset_right = 83.1299
+offset_bottom = 140.912
+rotation = -0.785398
+text = "1"
+label_settings = SubResource("LabelSettings_tqoya")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quan_ly_dau_vao" type="Node2D" parent="."]
+script = ExtResource("8_ep0fl")
+
+[node name="bat_dau" type="Button" parent="quan_ly_dau_vao"]
+visible = false
+offset_left = 1400.0
+offset_top = 743.0
+offset_right = 1596.0
+offset_bottom = 806.0
+theme_override_fonts/font = ExtResource("7_42uo1")
+theme_override_font_sizes/font_size = 25
+text = "Bỏ lượt"
+
+[node name="reload" type="Button" parent="quan_ly_dau_vao"]
+visible = false
+offset_left = 861.0
+offset_top = 762.0
+offset_right = 1061.0
+offset_bottom = 820.0
+theme_override_fonts/font = ExtResource("7_42uo1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_cleq4")
+text = "Ván mới"
+
+[node name="quan_ly_noi_de_bai" type="Node2D" parent="."]
+script = ExtResource("9_v4x5e")
+
+[node name="o_de_bai1" parent="quan_ly_noi_de_bai" instance=ExtResource("10_bsts1")]
+position = Vector2(735, 577)
+so_o = 1
+
+[node name="o_de_bai2" parent="quan_ly_noi_de_bai" instance=ExtResource("10_bsts1")]
+position = Vector2(885, 578)
+so_o = 2
+
+[node name="o_de_bai3" parent="quan_ly_noi_de_bai" instance=ExtResource("10_bsts1")]
+position = Vector2(1035, 577)
+so_o = 3
+
+[node name="o_de_bai4" parent="quan_ly_noi_de_bai" instance=ExtResource("10_bsts1")]
+position = Vector2(1185, 577)
+so_o = 4
+
+[node name="Timer" type="Timer" parent="quan_ly_noi_de_bai"]
+
+[node name="quan_ly_card" type="Node2D" parent="."]
+script = ExtResource("11_ttxeb")
+
+[node name="quan_ly_deck" type="Node2D" parent="."]
+position = Vector2(150, 950)
+script = ExtResource("12_gp7ks")
+
+[node name="Deck" type="Sprite2D" parent="quan_ly_deck"]
+position = Vector2(2.98023e-08, 0)
+scale = Vector2(0.505556, 0.560377)
+texture = ExtResource("13_nkrvh")
+
+[node name="Area2D" type="Area2D" parent="quan_ly_deck"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quan_ly_deck/Area2D"]
+shape = SubResource("RectangleShape2D_0ha60")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="quan_ly_deck"]
+visible = false
+offset_left = -46.0
+offset_top = -74.0
+offset_right = 46.0
+offset_bottom = 74.0
+theme_override_font_sizes/normal_font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="card_nguoi_choi" type="Node2D" parent="."]
+position = Vector2(-5, 0)
+script = ExtResource("14_s3elo")
+
+[node name="ban_choi" type="Panel" parent="card_nguoi_choi"]
+z_index = -2
+offset_left = 300.0
+offset_top = 830.0
+offset_right = 1600.0
+offset_bottom = 1090.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mswub")
+metadata/_edit_use_anchors_ = true
+
+[node name="quan_ly_nguoi_choi" type="Node2D" parent="."]
+
+[node name="nguoi_choi" type="CharacterBody2D" parent="quan_ly_nguoi_choi"]
+position = Vector2(400, 300)
+script = ExtResource("15_6au48")
+
+[node name="icon" type="AnimatedSprite2D" parent="quan_ly_nguoi_choi/nguoi_choi"]
+texture_filter = 1
+position = Vector2(7, -45)
+scale = Vector2(2.7, 2.7)
+sprite_frames = SubResource("SpriteFrames_fdqew")
+animation = &"idle"
+
+[node name="hieu_ung_tot" type="Panel" parent="quan_ly_nguoi_choi/nguoi_choi"]
+offset_left = -100.0
+offset_top = 197.0
+offset_right = -10.0
+offset_bottom = 247.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rtpkd")
+metadata/_edit_group_ = true
+
+[node name="trong_so" type="Label" parent="quan_ly_nguoi_choi/nguoi_choi/hieu_ung_tot"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -8.0
+offset_right = 90.0
+offset_bottom = 52.0
+text = "-"
+label_settings = SubResource("LabelSettings_of57s")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="icon" type="Sprite2D" parent="quan_ly_nguoi_choi/nguoi_choi/hieu_ung_tot"]
+texture_filter = 1
+position = Vector2(23, 26)
+scale = Vector2(0.05, 0.05)
+
+[node name="hieu_ung_xau" type="Panel" parent="quan_ly_nguoi_choi/nguoi_choi"]
+offset_left = 10.0
+offset_top = 197.0
+offset_right = 100.0
+offset_bottom = 247.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k65ib")
+metadata/_edit_group_ = true
+
+[node name="trong_so" type="Label" parent="quan_ly_nguoi_choi/nguoi_choi/hieu_ung_xau"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -8.0
+offset_right = 90.0
+offset_bottom = 52.0
+text = "-"
+label_settings = SubResource("LabelSettings_of57s")
+vertical_alignment = 1
+
+[node name="icon" type="Sprite2D" parent="quan_ly_nguoi_choi/nguoi_choi/hieu_ung_xau"]
+texture_filter = 1
+position = Vector2(23, 26)
+scale = Vector2(0.05, 0.05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quan_ly_nguoi_choi/nguoi_choi"]
+position = Vector2(0.0365906, -0.277664)
+shape = SubResource("CapsuleShape2D_of57s")
+disabled = true
+
+[node name="mau_bar" type="ProgressBar" parent="quan_ly_nguoi_choi/nguoi_choi"]
+offset_left = -210.0
+offset_top = 277.0
+offset_right = 100.0
+offset_bottom = 304.0
+theme_override_styles/background = SubResource("StyleBoxFlat_tqoya")
+theme_override_styles/fill = ExtResource("18_s1qg3")
+max_value = 30.0
+value = 30.0
+show_percentage = false
+metadata/_edit_group_ = true
+
+[node name="mau" type="Label" parent="quan_ly_nguoi_choi/nguoi_choi/mau_bar"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -8.0
+offset_right = 37.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.585847, 1.8049e-06, 4.33177e-07, 1)
+text = "30"
+label_settings = SubResource("LabelSettings_k65ib")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="max" type="Label" parent="quan_ly_nguoi_choi/nguoi_choi/mau_bar"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = -8.0
+offset_right = 99.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.585847, 1.8049e-06, 4.33177e-07, 1)
+text = "/30"
+label_settings = SubResource("LabelSettings_k65ib")
+vertical_alignment = 1
+
+[node name="khien_bar" type="Panel" parent="quan_ly_nguoi_choi/nguoi_choi"]
+offset_left = -211.0
+offset_top = 314.0
+offset_right = -163.0
+offset_bottom = 354.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4jm02")
+metadata/_edit_group_ = true
+
+[node name="khien" type="Label" parent="quan_ly_nguoi_choi/nguoi_choi/khien_bar"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -9.0
+offset_right = 45.0
+offset_bottom = 37.0
+text = "+0"
+label_settings = SubResource("LabelSettings_vneqc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ten" type="Label" parent="quan_ly_nguoi_choi/nguoi_choi"]
+offset_left = -160.0
+offset_top = -130.0
+offset_right = 160.0
+offset_bottom = -80.0
+text = "Bạn"
+label_settings = SubResource("LabelSettings_rtpkd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="doi_thu" type="CharacterBody2D" parent="quan_ly_nguoi_choi"]
+position = Vector2(1500, 300)
+script = ExtResource("19_hd8jx")
+
+[node name="icon" type="AnimatedSprite2D" parent="quan_ly_nguoi_choi/doi_thu"]
+texture_filter = 1
+position = Vector2(-11, -45)
+scale = Vector2(2.7, 2.7)
+sprite_frames = SubResource("SpriteFrames_vneqc")
+animation = &"dead"
+flip_h = true
+
+[node name="hieu_ung_tot" type="Panel" parent="quan_ly_nguoi_choi/doi_thu"]
+offset_left = -100.0
+offset_top = 197.0
+offset_right = -10.0
+offset_bottom = 247.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rtpkd")
+metadata/_edit_group_ = true
+
+[node name="trong_so" type="Label" parent="quan_ly_nguoi_choi/doi_thu/hieu_ung_tot"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -8.0
+offset_right = 90.0
+offset_bottom = 52.0
+text = "-"
+label_settings = SubResource("LabelSettings_of57s")
+vertical_alignment = 1
+
+[node name="icon" type="Sprite2D" parent="quan_ly_nguoi_choi/doi_thu/hieu_ung_tot"]
+texture_filter = 1
+position = Vector2(23, 26)
+scale = Vector2(0.05, 0.05)
+
+[node name="hieu_ung_xau" type="Panel" parent="quan_ly_nguoi_choi/doi_thu"]
+offset_left = 10.0
+offset_top = 197.0
+offset_right = 100.0
+offset_bottom = 247.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wscrc")
+metadata/_edit_group_ = true
+
+[node name="trong_so" type="Label" parent="quan_ly_nguoi_choi/doi_thu/hieu_ung_xau"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -8.0
+offset_right = 90.0
+offset_bottom = 52.0
+text = "-"
+label_settings = SubResource("LabelSettings_of57s")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="icon" type="Sprite2D" parent="quan_ly_nguoi_choi/doi_thu/hieu_ung_xau"]
+texture_filter = 1
+position = Vector2(23, 26)
+scale = Vector2(0.05, 0.05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quan_ly_nguoi_choi/doi_thu"]
+position = Vector2(0.0365906, -0.277664)
+shape = SubResource("CapsuleShape2D_of57s")
+disabled = true
+
+[node name="mau_bar" type="ProgressBar" parent="quan_ly_nguoi_choi/doi_thu"]
+offset_left = -100.0
+offset_top = 277.0
+offset_right = 210.0
+offset_bottom = 304.0
+theme_override_styles/background = SubResource("StyleBoxFlat_tqoya")
+theme_override_styles/fill = ExtResource("18_s1qg3")
+max_value = 30.0
+value = 30.0
+show_percentage = false
+metadata/_edit_group_ = true
+
+[node name="mau" type="Label" parent="quan_ly_nguoi_choi/doi_thu/mau_bar"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -8.0
+offset_right = 37.0
+offset_bottom = 27.0
+text = "30"
+label_settings = SubResource("LabelSettings_k65ib")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="max" type="Label" parent="quan_ly_nguoi_choi/doi_thu/mau_bar"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = -8.0
+offset_right = 99.0
+offset_bottom = 27.0
+text = "/30"
+label_settings = SubResource("LabelSettings_k65ib")
+vertical_alignment = 1
+
+[node name="khien_bar" type="Panel" parent="quan_ly_nguoi_choi/doi_thu"]
+offset_left = -100.0
+offset_top = 314.0
+offset_right = -52.0
+offset_bottom = 354.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4jm02")
+metadata/_edit_group_ = true
+
+[node name="khien" type="Label" parent="quan_ly_nguoi_choi/doi_thu/khien_bar"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -9.0
+offset_right = 45.0
+offset_bottom = 37.0
+text = "+0"
+label_settings = SubResource("LabelSettings_vneqc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ten" type="Label" parent="quan_ly_nguoi_choi/doi_thu"]
+offset_left = -160.0
+offset_top = -130.0
+offset_right = 160.0
+offset_bottom = -80.0
+text = "Bot"
+label_settings = SubResource("LabelSettings_rtpkd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="thong_tin" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1600.0
+offset_top = 649.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="ban_choi" type="Panel" parent="thong_tin"]
+z_index = -2
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 442.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gjnwh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="thong_tin"]
+editor_description = "Thông tin thẻ bài"
+layout_mode = 0
+offset_left = 12.0
+offset_top = 11.0
+offset_right = 310.0
+offset_bottom = 431.0
+theme_override_fonts/normal_font = ExtResource("7_42uo1")
+theme_override_fonts/italics_font = ExtResource("7_42uo1")
+theme_override_fonts/bold_italics_font = ExtResource("7_42uo1")
+theme_override_fonts/bold_font = ExtResource("7_42uo1")
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+scroll_following = true
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="sound" type="Node2D" parent="."]
+
+[node name="Deck1" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("21_tqshy")
+
+[node name="Deck2" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("22_3kgru")
+
+[node name="Card2" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("24_1fng4")
+
+[node name="Card1" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("25_dkqdp")
+pitch_scale = 0.89
+mix_target = 1
+max_polyphony = 2
+
+[node name="Card3" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("26_nb12r")
+
+[node name="Card4" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("27_lg5kp")
+
+[node name="quay_ve" type="Button" parent="."]
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 326.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("7_42uo1")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = ExtResource("28_cleq4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_biqav")
+text = "Quay lại"
+
+[node name="huong_dan" type="Button" parent="."]
+offset_left = 1592.0
+offset_top = 72.0
+offset_right = 1798.0
+offset_bottom = 152.0
+theme_override_fonts/font = ExtResource("7_42uo1")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = ExtResource("28_cleq4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lysc8")
+text = "Hướng dẫn"
+
+[node name="huongdan" type="Node2D" parent="."]
+
+[node name="buoc1" type="Control" parent="huongdan"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="huongdan/buoc1"]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 846.0
+offset_right = 1506.0
+offset_bottom = 1049.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vg48i")
+
+[node name="Label" type="Label" parent="huongdan/buoc1"]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 766.0
+offset_right = 768.0
+offset_bottom = 824.0
+text = "Chọn một lá bài "
+label_settings = SubResource("LabelSettings_42uo1")
+
+[node name="buoc2" type="Control" parent="huongdan"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="huongdan/buoc2"]
+layout_mode = 0
+offset_left = 1597.0
+offset_top = 643.0
+offset_right = 1882.0
+offset_bottom = 1029.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vg48i")
+
+[node name="Label" type="Label" parent="huongdan/buoc2"]
+layout_mode = 0
+offset_left = 1141.0
+offset_top = 723.0
+offset_right = 1584.0
+offset_bottom = 781.0
+text = "Công dụng của lá bài ->"
+label_settings = SubResource("LabelSettings_42uo1")
+
+[node name="Panel2" type="Panel" parent="huongdan/buoc2"]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 479.0
+offset_right = 1263.0
+offset_bottom = 682.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vg48i")
+
+[node name="Label2" type="Label" parent="huongdan/buoc2"]
+layout_mode = 0
+offset_left = 758.0
+offset_top = 405.0
+offset_right = 1201.0
+offset_bottom = 463.0
+text = "Kéo lá bài vào ô trống"
+label_settings = SubResource("LabelSettings_42uo1")
+
+[node name="buoc3" type="Control" parent="huongdan"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="huongdan/buoc3"]
+layout_mode = 0
+offset_left = 643.0
+offset_top = 339.0
+offset_right = 1298.0
+offset_bottom = 458.0
+text = "Sau khi 4 ô đủ các lá bài thì sẽ bắt đầu phát huy công dụng"
+label_settings = SubResource("LabelSettings_42uo1")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="quan_ly_dau_vao/bat_dau" to="quan_ly_dau_vao" method="_on_bat_dau_pressed"]
+[connection signal="button_down" from="quan_ly_dau_vao/reload" to="quan_ly_dau_vao" method="_on_reload_button_down"]
+[connection signal="timeout" from="quan_ly_noi_de_bai/Timer" to="quan_ly_noi_de_bai" method="_on_timer_timeout"]
+[connection signal="button_down" from="quay_ve" to="." method="_on_quay_ve_button_down"]
+[connection signal="button_down" from="huong_dan" to="." method="_on_huong_dan_button_down"]

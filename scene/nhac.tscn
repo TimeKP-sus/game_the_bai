@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://diwd1g77tfeep"]
+
+[ext_resource type="AudioStream" uid="uid://bwkt5umdkst6q" path="res://assets/nhac_nen/nhac1.mp3" id="1_2d1kl"]
+[ext_resource type="Script" uid="uid://c2j38y5ajypmb" path="res://script/Nhac.cs" id="2_6kvdm"]
+
+[node name="Nhac" type="AudioStreamPlayer"]
+stream = ExtResource("1_2d1kl")
+autoplay = true
+script = ExtResource("2_6kvdm")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

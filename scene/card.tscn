@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dks51f8ymae0y"]
+
+[ext_resource type="Script" uid="uid://djq421ev6n4lh" path="res://script/Card.cs" id="1_rjlel"]
+[ext_resource type="FontFile" uid="uid://ckbhfuwafrf6q" path="res://assets/font/SVN-Retron 2000.otf" id="2_gw1lc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gw1lc"]
+font = ExtResource("2_gw1lc")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+outline_size = 6
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(84, 128)
+
+[node name="card" type="Node2D"]
+position = Vector2(150, 950)
+script = ExtResource("1_rjlel")
+
+[node name="icon_card" type="Sprite2D" parent="."]
+position = Vector2(0.8, 0)
+scale = Vector2(0.153125, 0.234375)
+
+[node name="trong_so" type="Label" parent="."]
+offset_left = -4.40897
+offset_top = -67.8757
+offset_right = 32.591
+offset_bottom = -30.8757
+text = "12"
+label_settings = SubResource("LabelSettings_gw1lc")
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_lquwl")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gamethebai_remake", "gamethebai_remake.csproj", "{F32E3BAE-003F-4D0A-A5E3-2D2D6A97BC4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F32E3BAE-003F-4D0A-A5E3-2D2D6A97BC4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F32E3BAE-003F-4D0A-A5E3-2D2D6A97BC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F32E3BAE-003F-4D0A-A5E3-2D2D6A97BC4F}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{F32E3BAE-003F-4D0A-A5E3-2D2D6A97BC4F}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{F32E3BAE-003F-4D0A-A5E3-2D2D6A97BC4F}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{F32E3BAE-003F-4D0A-A5E3-2D2D6A97BC4F}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg1rd5qu3ep3c"]
+
+[ext_resource type="PackedScene" uid="uid://divmuu1d86k1b" path="res://scene/canh_load.tscn" id="1_rxdjg"]
+[ext_resource type="Script" uid="uid://dajfn4fydrphp" path="res://script/NodeCanhLoad.cs" id="1_vb0at"]
+
+[node name="NodeCanhLoad" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vb0at")
+
+[node name="canh_load" parent="." instance=ExtResource("1_rxdjg")]

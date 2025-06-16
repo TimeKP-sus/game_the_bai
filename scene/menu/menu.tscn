@@ -1,0 +1,235 @@
+[gd_scene load_steps=13 format=3 uid="uid://dlh75yop4y53n"]
+
+[ext_resource type="Shader" uid="uid://bvsj7ek3x0wko" path="res://assets/theme/background_balatro.gdshader" id="1_i0sq5"]
+[ext_resource type="Texture2D" uid="uid://beyv6640e28if" path="res://assets/bg/1.png" id="1_ny6dg"]
+[ext_resource type="Script" uid="uid://b1arbpoe40uh7" path="res://scene/menu/Menu.cs" id="1_respr"]
+[ext_resource type="Script" uid="uid://cikshicsg8jhg" path="res://scene/menu/ParallaxBackground.cs" id="2_huf2n"]
+[ext_resource type="Texture2D" uid="uid://do30y2dn1iw4c" path="res://assets/bg/4.png" id="4_rmufa"]
+[ext_resource type="Texture2D" uid="uid://dvurtiff0upjy" path="res://assets/bg/2.png" id="5_53055"]
+[ext_resource type="StyleBox" uid="uid://byw2movqd2u1d" path="res://assets/shader/button_hover.tres" id="6_7ruq5"]
+[ext_resource type="FontFile" uid="uid://ckbhfuwafrf6q" path="res://assets/font/SVN-Retron 2000.otf" id="6_respr"]
+[ext_resource type="StyleBox" uid="uid://c3r3xhrqms366" path="res://assets/shader/panel_nhap_ten.tres" id="9_respr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3q3hy"]
+shader = ExtResource("1_i0sq5")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.002
+shader_parameter/scanlines_width = 0.073
+shader_parameter/grille_opacity = 0.04
+shader_parameter/resolution = Vector2(1920, 2200)
+shader_parameter/pixelate = false
+shader_parameter/roll = false
+shader_parameter/roll_speed = 4.0
+shader_parameter/roll_size = 0.4
+shader_parameter/roll_variation = 0.1
+shader_parameter/distort_intensity = 0.031
+shader_parameter/noise_opacity = 0.056
+shader_parameter/noise_speed = 8.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.00100005
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.742
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 2.0
+shader_parameter/vignette_opacity = 0.111
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojih3"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.380392, 0.478431, 0.721569, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_respr"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 6
+shadow_color = Color(0, 0, 0, 0.976471)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_respr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_3q3hy")
+anchors_preset = -1
+anchor_top = 0.0277778
+anchor_right = 1.00521
+anchor_bottom = 0.972222
+offset_top = -30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="CanvasLayer"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("2_huf2n")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(600, 0)
+
+[node name="1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, 10)
+scale = Vector2(3.33333, 3.30247)
+texture = ExtResource("1_ny6dg")
+centered = false
+flip_v = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(540, 308)
+rotation = 3.14061
+texture = ExtResource("4_rmufa")
+centered = false
+
+[node name="7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1270, 320)
+rotation = 3.14061
+texture = ExtResource("4_rmufa")
+centered = false
+
+[node name="8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1780, 320)
+rotation = 3.14061
+texture = ExtResource("4_rmufa")
+centered = false
+
+[node name="5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(730, 330)
+rotation = 3.14061
+texture = ExtResource("4_rmufa")
+centered = false
+
+[node name="2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1146, 329)
+scale = Vector2(1.57639, 1.26543)
+texture = ExtResource("5_53055")
+
+[node name="3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(805, 329)
+scale = Vector2(2.76042, 1.26543)
+texture = ExtResource("5_53055")
+
+[node name="6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(970, 329)
+scale = Vector2(3.33333, 1.26543)
+texture = ExtResource("5_53055")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+z_index = 1
+offset_left = 333.0
+offset_top = 125.0
+offset_right = 1546.0
+offset_bottom = 484.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.366595, 0.366595, 0.366595, 1)
+theme_override_constants/outline_size = 32
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/normal_font = ExtResource("6_respr")
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "[wave amp=40.0 freq=1.0 connected=1]PROJECT A[/wave]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ten_tai_khoan" type="Button" parent="."]
+offset_left = 1384.0
+offset_top = 104.0
+offset_right = 1728.0
+offset_bottom = 191.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("6_respr")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover_pressed = ExtResource("6_7ruq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojih3")
+theme_override_styles/pressed = ExtResource("6_7ruq5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_respr")
+
+[node name="thoat" type="Button" parent="."]
+offset_left = 816.0
+offset_top = 832.0
+offset_right = 1048.0
+offset_bottom = 919.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("6_respr")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover_pressed = ExtResource("6_7ruq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojih3")
+theme_override_styles/pressed = ExtResource("6_7ruq5")
+theme_override_styles/normal = ExtResource("9_respr")
+text = "Thoát"
+
+[node name="cai_dat" type="Button" parent="."]
+offset_left = 800.0
+offset_top = 704.0
+offset_right = 1064.0
+offset_bottom = 791.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("6_respr")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover_pressed = ExtResource("6_7ruq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojih3")
+theme_override_styles/pressed = ExtResource("6_7ruq5")
+theme_override_styles/normal = ExtResource("9_respr")
+text = "Cài đặt"
+
+[node name="cac_the_bai" type="Button" parent="."]
+offset_left = 785.0
+offset_top = 583.0
+offset_right = 1073.0
+offset_bottom = 670.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("6_respr")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover_pressed = ExtResource("6_7ruq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojih3")
+theme_override_styles/pressed = ExtResource("6_7ruq5")
+theme_override_styles/normal = ExtResource("9_respr")
+text = "Các thẻ bài"
+
+[node name="bat_dau" type="Button" parent="."]
+offset_left = 756.0
+offset_top = 467.0
+offset_right = 1104.0
+offset_bottom = 554.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.65098, 0, 1)
+theme_override_fonts/font = ExtResource("6_respr")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover_pressed = ExtResource("6_7ruq5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojih3")
+theme_override_styles/pressed = ExtResource("6_7ruq5")
+theme_override_styles/normal = ExtResource("9_respr")
+text = "Bắt đầu"
+
+[connection signal="button_down" from="ten_tai_khoan" to="." method="_on_ten_tai_khoan_button_down"]
+[connection signal="button_down" from="cac_the_bai" to="." method="_on_cac_the_bai_button_down"]
+[connection signal="button_down" from="bat_dau" to="." method="_on_bat_dau_button_down"]

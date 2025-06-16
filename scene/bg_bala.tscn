@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://1lb7kupbqv7l"]
+
+[ext_resource type="PackedScene" uid="uid://cpo4vwuh23c7o" path="res://scene/canvas_layer.tscn" id="1_ab51c"]
+
+[node name="BgBala" type="Node2D"]
+z_index = -3
+
+[node name="CanvasLayer" parent="." instance=ExtResource("1_ab51c")]
